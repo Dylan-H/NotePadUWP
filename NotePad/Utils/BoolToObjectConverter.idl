@@ -1,0 +1,11 @@
+namespace NotePad
+{
+	unsealed  runtimeclass BoolToObjectConverter : Windows.UI.Xaml.DependencyObject, Windows.UI.Xaml.Data.IValueConverter
+	{
+		BoolToObjectConverter();
+		static Windows.UI.Xaml.DependencyProperty TrueValueProperty{ get; };
+		static Windows.UI.Xaml.DependencyProperty FalseValueProperty{ get; };
+		Object TrueValue;
+		Object FalseValue;
+	}
+}

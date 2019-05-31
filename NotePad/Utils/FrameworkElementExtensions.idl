@@ -1,0 +1,14 @@
+namespace NotePad
+{
+	[default_interface]
+	runtimeclass FrameworkElementExtensions
+	{
+		static Windows.UI.Xaml.DependencyProperty AncestorTypeProperty{ get; };
+		static String GetAncestorType(Windows.UI.Xaml.DependencyObject obj);
+		static void SetAncestorType(Windows.UI.Xaml.DependencyObject obj, String value);
+
+		static Windows.UI.Xaml.DependencyProperty AncestorProperty{ get; };
+		static Object GetAncestor(Windows.UI.Xaml.DependencyObject obj);
+		static void SetAncestor(Windows.UI.Xaml.DependencyObject obj, Object value);
+	};
+}

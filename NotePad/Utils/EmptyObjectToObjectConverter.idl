@@ -1,0 +1,12 @@
+namespace NotePad
+{
+	[default_interface] 
+	runtimeclass EmptyObjectToObjectConverter : Windows.UI.Xaml.DependencyObject, Windows.UI.Xaml.Data.IValueConverter
+	{
+		EmptyObjectToObjectConverter();
+		static Windows.UI.Xaml.DependencyProperty NotEmptyValueProperty{ get; };
+		static Windows.UI.Xaml.DependencyProperty EmptyValueProperty{ get; };
+		Object NotEmptyValue;
+		Object EmptyValue;
+	}
+}

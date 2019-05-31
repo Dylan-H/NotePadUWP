@@ -1,0 +1,9 @@
+namespace NotePad
+{
+    [default_interface]
+    runtimeclass ScintillaControl : Windows.UI.Xaml.Controls.UserControl
+    {
+		 ScintillaControl();
+	void setDraw(Boolean value);
+    }
+}

@@ -1,0 +1,42 @@
+import "Controls/TabWidthMode.idl";
+import "Controls/TabViewItem.idl";
+namespace NotePad
+{
+	[default_interface]
+	runtimeclass TabView : Windows.UI.Xaml.Controls.ListViewBase
+	{
+		TabView();
+	    Object TabStartHeader;
+		Windows.UI.Xaml.DataTemplate TabStartHeaderTemplate;
+		Object TabActionHeader;
+		Windows.UI.Xaml.DataTemplate TabActionHeaderTemplate;
+		Object TabEndHeader;
+		Windows.UI.Xaml.DataTemplate TabEndHeaderTemplate;
+		Windows.UI.Xaml.DataTemplate ItemHeaderTemplate;
+		Boolean CanCloseTabs;
+		Boolean IsCloseButtonOverlay;
+		Double SelectedTabWidth;
+		TabWidthMode TabWidthBehavior;
+		static Windows.UI.Xaml.DependencyProperty TabStartHeaderProperty{ get; };
+		static Windows.UI.Xaml.DependencyProperty TabStartHeaderTemplateProperty{ get; };
+		static Windows.UI.Xaml.DependencyProperty TabActionHeaderProperty{ get; };
+		static Windows.UI.Xaml.DependencyProperty TabActionHeaderTemplateProperty{ get; };
+		static Windows.UI.Xaml.DependencyProperty TabEndHeaderProperty{ get; };
+		static Windows.UI.Xaml.DependencyProperty TabEndHeaderTemplateProperty{ get; };
+		static Windows.UI.Xaml.DependencyProperty ItemHeaderTemplateProperty{ get; };
+		static Windows.UI.Xaml.DependencyProperty CanCloseTabsProperty{ get; };
+		static Windows.UI.Xaml.DependencyProperty IsCloseButtonOverlayProperty{ get; };
+		static Windows.UI.Xaml.DependencyProperty SelectedTabWidthProperty{ get; };
+		static Windows.UI.Xaml.DependencyProperty TabWidthBehaviorProperty{ get; };
+		static Boolean GetIgnoreColumn(Windows.UI.Xaml.Controls.ColumnDefinition obj);
+		static void SetIgnoreColumn(Windows.UI.Xaml.Controls.ColumnDefinition obj, Boolean value);
+		static Windows.UI.Xaml.DependencyProperty IgnoreColumnProperty{ get; };
+		static Boolean GetConstrainColumn(Windows.UI.Xaml.Controls.ColumnDefinition obj);
+		static void SetConstrainColumn(Windows.UI.Xaml.Controls.ColumnDefinition obj, Boolean value);
+		static Windows.UI.Xaml.DependencyProperty ConstrainColumnProperty{ get; };
+
+		static Windows.UI.Xaml.DependencyProperty OriginalWidthProperty{ get; };
+		static Double GetOriginalWidth(TabViewItem obj);
+		static void SetOriginalWidth(TabViewItem obj, Double Double);
+	};
+}

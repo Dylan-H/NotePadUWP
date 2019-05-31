@@ -1,0 +1,30 @@
+import"Controls/LayoutTransformControl.idl";
+import"Controls/HeaderedContentControl.idl";
+namespace NotePad
+{
+	enum ExpandDirection
+	{
+		Down,
+		Up,
+		Left,
+		Right
+	};
+
+	[Windows.UI.Xaml.TemplatePart("LayoutTransformerPart", NotePad.LayoutTransformControl)]
+    [Windows.UI.Xaml.Markup.ContentProperty("Content")]
+	unsealed runtimeclass Expander : NotePad.HeaderedContentControl
+	{
+		Expander();
+		static Windows.UI.Xaml.DependencyProperty IsExpandedProperty{ get; };
+		static Windows.UI.Xaml.DependencyProperty ExpandDirectionProperty{ get; };
+		static Windows.UI.Xaml.DependencyProperty ContentOverlayProperty{ get; };
+		static Windows.UI.Xaml.DependencyProperty HeaderStyleProperty{ get; };
+		Boolean IsExpanded;
+		ExpandDirection ExpandDirection;
+		Windows.UI.Xaml.UIElement ContentOverlay;
+		Windows.UI.Xaml.Style HeaderStyle;
+
+		event Windows.Foundation.EventHandler<Object> Expanded;
+		event Windows.Foundation.EventHandler<Object> Collapsed;
+	};
+}

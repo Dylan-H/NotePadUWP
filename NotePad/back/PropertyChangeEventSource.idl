@@ -1,0 +1,13 @@
+namespace NotePad
+{
+	[default_interface]
+	runtimeclass PropertyChangeEventSource : Windows.UI.Xaml.FrameworkElement
+	{
+
+		PropertyChangeEventSource(Windows.UI.Xaml.DependencyObject source, String propertyName,Windows.UI.Xaml.Data.BindingMode bindingMode );
+		static Windows.UI.Xaml.DependencyProperty ValueProperty{ get; };
+		Double Value;
+
+		event Windows.Foundation.EventHandler<Double> ValueChanged;
+	};
+}

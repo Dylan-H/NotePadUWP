@@ -1,0 +1,31 @@
+import "Controls/MenuItem.idl";
+namespace NotePad
+{
+	[default_interface]
+	runtimeclass Menu : Windows.UI.Xaml.Controls.ItemsControl
+	{
+		Menu();
+		static Windows.UI.Xaml.DependencyProperty OrientationProperty{ get; };
+		static Windows.UI.Xaml.DependencyProperty MenuFlyoutStyleProperty{ get; };
+		static Windows.UI.Xaml.DependencyProperty TooltipStyleProperty{ get; };
+		static Windows.UI.Xaml.DependencyProperty TooltipPlacementProperty{ get; };
+		static Windows.UI.Xaml.DependencyProperty InputGestureTextProperty{ get; };
+		static Windows.UI.Xaml.DependencyProperty AllowTooltipProperty{ get; };
+		static String GetInputGestureText(Windows.UI.Xaml.FrameworkElement obj);
+		static void SetInputGestureText(Windows.UI.Xaml.FrameworkElement obj, String value);
+		static Boolean GetAllowTooltip(Menu obj);
+		static void SetAllowTooltip(Menu obj, Boolean value);
+
+
+		Windows.UI.Xaml.Controls.Primitives.FlyoutPlacementMode CurrentFlyoutPlacement();
+		Boolean UpdateMenuItemsFlyoutPlacement();
+		void CalculateBounds();
+		void IsInTransitionState(Boolean value);
+		Windows.UI.Xaml.Controls.Orientation Orientation;
+		Windows.UI.Xaml.Style  MenuFlyoutStyle;
+		Windows.UI.Xaml.Style  TooltipStyle;
+		Windows.UI.Xaml.Controls.Primitives.PlacementMode TooltipPlacement;
+		MenuItem SelectedMenuItem;
+
+	};
+}

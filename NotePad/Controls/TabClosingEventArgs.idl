@@ -1,0 +1,12 @@
+import "Controls/TabViewItem.idl";
+namespace NotePad
+{
+	[default_interface]
+	runtimeclass TabClosingEventArgs 
+	{
+		TabClosingEventArgs(Object obj,TabViewItem item);
+		Object Item{ get; };
+		TabViewItem Tab{ get; };
+		Boolean Cancel;
+	};
+}

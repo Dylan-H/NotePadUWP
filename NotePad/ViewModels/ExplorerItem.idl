@@ -1,0 +1,17 @@
+import "Utils/BindableBase.idl";
+namespace NotePad
+{
+	enum ExplorerItemType { Folder, File };
+	[Windows.UI.Xaml.Data.Bindable]
+	unsealed runtimeclass ExplorerItem : BindableBase
+	{
+		ExplorerItem();
+		Windows.Storage.StorageFile File;
+		Windows.Storage.StorageFolder Folder;
+		ExplorerItemType Type;
+		Windows.Foundation.Collections.IObservableVector<Object> Children;
+		Boolean IsExpanded;
+		Boolean IsSelected;
+
+	}
+}

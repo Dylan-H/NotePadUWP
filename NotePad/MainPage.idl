@@ -1,0 +1,10 @@
+import "ViewModels/MainViewModel.idl";
+namespace NotePad
+{
+    [default_interface]
+    runtimeclass MainPage : Windows.UI.Xaml.Controls.Page
+    {
+        MainPage();
+		MainViewModel ViewModel{ get; };
+    }
+}

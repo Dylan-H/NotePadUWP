@@ -1,0 +1,16 @@
+namespace NotePad
+{
+	[default_interface]
+	runtimeclass MenuItem : Windows.UI.Xaml.Controls.ItemsControl
+	{
+		MenuItem();
+		static Windows.UI.Xaml.DependencyProperty HeaderProperty{ get; };
+		static Windows.UI.Xaml.DependencyProperty HeaderTemplateProperty{ get; };
+		static Windows.UI.Xaml.DependencyProperty OrientationProperty{ get; };
+		Object Header;
+		Windows.UI.Xaml.DataTemplate HeaderTemplate;
+		Windows.UI.Xaml.Controls.Orientation Orientation;
+		void ShowMenu();
+		void HideMenu();
+	};
+}

@@ -1,0 +1,43 @@
+// MainViewModel
+import"Utils/DelegateCommand.idl";
+import "Utils/BindableBase.idl";
+import "ScintillaControl.idl";
+namespace NotePad
+{
+	unsealed runtimeclass MainViewModel : BindableBase
+    {
+        MainViewModel();
+		String Title{ get; set; };
+		String FolderName{ get; set; };
+		Double TextSize{ get; };
+		Int32 TabIndex{ get; set; };
+		ScintillaControl SciCtrl{ get; set; };
+		Windows.Foundation.IAsyncAction Init();
+		Windows.Foundation.Collections.IObservableVector<Object> FolderDataSource{ get; };
+		Windows.Foundation.Collections.IObservableVector<Object> OpenFileDataSource{ get; };
+		Windows.Foundation.Collections.IObservableVector<Object> OpenFileTabDataSource{ get; };
+		void  AddOpenFile(Windows.Storage.StorageFile file);
+
+		DelegateCommand OnNewFileCommand{ get; };
+		DelegateCommand OnOpenFileCommand{ get; };
+		DelegateCommand OnRevertCommand{ get; };
+		DelegateCommand OnCloseCommand{ get; };
+		DelegateCommand OnSaveCommand{ get; };
+		DelegateCommand OnSaveAsCommand{ get; };
+		DelegateCommand OnEncodingCommand{ get; };
+		DelegateCommand OnExportCommand{ get; };
+		DelegateCommand OnExitCommand{ get; };
+
+		///////////////////////////////////
+		DelegateCommand OnUndoCommand{ get; };
+		DelegateCommand OnRedoCommand{ get; };
+		DelegateCommand OnCutCommand{ get; };
+		DelegateCommand OnPasteCommand{ get; };
+		DelegateCommand OnDuplicateCommand{ get; };
+		DelegateCommand OnDeleteCommand{ get; };
+		DelegateCommand OnSelectAllCommand{ get; };
+		DelegateCommand OnCopyAsRTFCommand{ get; };
+
+		DelegateCommand OnAboutCommand{ get; };
+	}
+}

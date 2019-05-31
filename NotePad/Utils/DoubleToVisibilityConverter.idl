@@ -1,0 +1,17 @@
+namespace NotePad
+{
+	unsealed  runtimeclass DoubleToVisibilityConverter : Windows.UI.Xaml.DependencyObject, Windows.UI.Xaml.Data.IValueConverter
+	{
+		DoubleToVisibilityConverter();
+		static Windows.UI.Xaml.DependencyProperty TrueValueProperty{ get; };
+		static Windows.UI.Xaml.DependencyProperty FalseValueProperty{ get; };
+		static Windows.UI.Xaml.DependencyProperty NullValueProperty{ get; };
+		static Windows.UI.Xaml.DependencyProperty GreaterThanProperty{ get; };
+		static Windows.UI.Xaml.DependencyProperty LessThanProperty{ get; };
+		Object TrueValue;
+		Object FalseValue;
+		Object NullValue;
+		Double GreaterThan;
+		Double LessThan;
+	}
+}

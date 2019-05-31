@@ -1,0 +1,13 @@
+namespace NotePad
+{
+	[Windows.UI.Xaml.Markup.ContentProperty("Child")]
+	runtimeclass LayoutTransformControl : Windows.UI.Xaml.Controls.Control
+	{
+		LayoutTransformControl();
+		static Windows.UI.Xaml.DependencyProperty ChildProperty{ get; };
+		static Windows.UI.Xaml.DependencyProperty TransformProperty{ get; };
+
+		Windows.UI.Xaml.FrameworkElement Child;
+		Windows.UI.Xaml.Media.Transform Transform;
+	};
+}

@@ -1,0 +1,28 @@
+import "Controls/GridSplitterEnum.idl";
+namespace NotePad
+{
+	[default_interface]
+	runtimeclass GridSplitter : Windows.UI.Xaml.Controls.Control
+	{
+		GridSplitter();
+		static Windows.UI.Xaml.DependencyProperty ElementProperty{ get; };
+		static Windows.UI.Xaml.DependencyProperty ResizeDirectionProperty{ get; };
+		static Windows.UI.Xaml.DependencyProperty ResizeBehaviorProperty{ get; };
+		static Windows.UI.Xaml.DependencyProperty GripperForegroundProperty{ get; };
+		static Windows.UI.Xaml.DependencyProperty ParentLevelProperty{ get; };
+		static Windows.UI.Xaml.DependencyProperty GripperCursorProperty{ get; };
+		static Windows.UI.Xaml.DependencyProperty GripperCustomCursorResourceProperty{ get; };
+		static Windows.UI.Xaml.DependencyProperty CursorBehaviorProperty{ get; };
+
+		Windows.UI.Xaml.UIElement Element;
+		GridResizeDirection ResizeDirection;
+		GridResizeBehavior ResizeBehavior;
+		Windows.UI.Xaml.Media.Brush GripperForeground;
+		Int32 ParentLevel;
+		GripperCursorType GripperCursor;
+		Int32 GripperCustomCursorResource;
+		SplitterCursorBehavior CursorBehavior;
+		Windows.UI.Core.CoreCursor PreviousCursor;
+	};
+}
+

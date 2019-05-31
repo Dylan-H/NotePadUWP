@@ -1,0 +1,11 @@
+import "Controls/TabViewItem.idl";
+namespace NotePad
+{
+	[default_interface]
+	runtimeclass TabDraggedOutsideEventArgs
+	{
+		TabDraggedOutsideEventArgs(Object item, TabViewItem tab);
+		Object Item {get; set;};
+		TabViewItem Tab{ get; };
+	};
+}

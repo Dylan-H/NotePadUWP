@@ -1,0 +1,11 @@
+import "Utils/BindableBase.idl";
+namespace NotePad
+{
+	[Windows.UI.Xaml.Data.Bindable]
+	unsealed runtimeclass OpenFileItem : BindableBase
+	{
+		OpenFileItem(Windows.Storage.StorageFile file,Windows.UI.Xaml.Input.ICommand command);
+		Windows.Storage.StorageFile File;
+		Windows.UI.Xaml.Input.ICommand Command;
+	}
+}

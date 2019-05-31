@@ -1,0 +1,13 @@
+import "ViewModels/MainViewModel.idl";
+namespace NotePad
+{
+    [default_interface]
+    runtimeclass CustomTitleBar : Windows.UI.Xaml.Controls.UserControl,Windows.UI.Xaml.Data.INotifyPropertyChanged
+    {
+        CustomTitleBar();
+		MainViewModel ViewModel{ get; set; };
+		Double CoreTitleBarHeight{ get; };
+		void SetPageContent(Windows.UI.Xaml.UIElement element);
+		Windows.UI.Xaml.Thickness CoreTitleBarPadding{ get; };
+    }
+}

@@ -1,0 +1,8 @@
+namespace NotePad
+{
+    [default_interface]
+    runtimeclass SerachPage : Windows.UI.Xaml.Controls.Page
+    {
+        SerachPage();
+    }
+}

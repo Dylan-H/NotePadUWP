@@ -1,0 +1,13 @@
+import "ViewModels/ExplorerItem.idl";
+import "ViewModels/MainViewModel.idl";
+namespace NotePad
+{
+    [default_interface]
+    runtimeclass ExplorerPage : Windows.UI.Xaml.Controls.Page
+    {
+        ExplorerPage();
+		Windows.Foundation.Collections.IObservableVector<Object> FolderDataSource{ get; };
+		Windows.Foundation.Collections.IObservableVector<Object> OpenFileDataSource{ get; };
+		MainViewModel MainViewModel{ get; };
+    }
+}

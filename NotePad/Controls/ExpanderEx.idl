@@ -1,0 +1,21 @@
+
+namespace NotePad
+{
+
+    [Windows.UI.Xaml.Markup.ContentProperty("Content")]
+	unsealed runtimeclass ExpanderEx : Windows.UI.Xaml.Controls.ContentControl
+	{
+		ExpanderEx();
+		static Windows.UI.Xaml.DependencyProperty HeaderProperty{ get; };
+		static Windows.UI.Xaml.DependencyProperty IsExpandedProperty{ get; };
+		static Windows.UI.Xaml.DependencyProperty ContentEndProperty{ get; };
+		static Windows.UI.Xaml.DependencyProperty HeaderStyleProperty{ get; };
+		Boolean IsExpanded;
+		Object Header;
+		Windows.UI.Xaml.UIElement ContentEnd;
+		Windows.UI.Xaml.Style HeaderStyle;
+
+		event Windows.Foundation.EventHandler<Object> Expanded;
+		event Windows.Foundation.EventHandler<Object> Collapsed;
+	};
+}
